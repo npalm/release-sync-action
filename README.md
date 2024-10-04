@@ -8,12 +8,13 @@ Action to sync release between repositories.
 
 ### Via command line
 
-````bash
+```bash
 npm install
 export INPUT_GITHUB_TOKEN=your_github_token
 export INPUT_SOURCE_REPO=source_repository
 export INPUT_TARGET_REPO=target_repository
 npm run serve:watch
+
 ```
 
 ### Via GitHub Actions
