@@ -1,0 +1,31 @@
+name: 'Sync release'
+description: 'Sync releases between repositories'
+author: 'Niek Palm'
+
+# Add your action's branding here. This will appear on the GitHub Marketplace.
+branding:
+  icon: 'package'
+  color: 'blue'
+
+# Define your inputs here.
+inputs:
+  githubToken:
+    description: 'GitHub token'
+    required: true
+  sourceRepo:
+    description: 'Source repository'
+    required: true
+  targetRepo:
+    description: 'Target repository, if not set the current repository is used'
+    required: false
+  deleteReleases:
+    description: 'Delete a release in the target if already exists.'
+    required: false
+    default: 'false'
+  startFrom:
+    description: 'Start from a specific release'
+    required: false
+
+runs:
+  using: node20
+  main: dist/index.js
